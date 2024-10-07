@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jug Problem Solver - Output</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(45deg, #6A2148 40%, #8C3D65);
+            background-size: cover;
+            color: #F5F5F5;
+            text-align: center;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h1 {
+            font-size: 48px;
+            margin-bottom: 30px;
+            color: #FF9FB4;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        pre {
+            max-width: 600px;
+            width: 100%;
+            padding: 20px;
+            background-color: #FFFFFF;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            color: #6A2148;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 16px;
+            line-height: 1.6;
+            font-weight: bold;
+            resize: both; /* Allow resizing */
+            overflow: auto; /* Allow scrolling */
+        }
+
+        a.back-to-main {
+            margin-top: 20px;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-size: 20px;
+            border-radius: 4px;
+            background-color: #FF9FB4;
+            color: #6A2148;
+            transition: background-color 0.3s, transform 0.5s;
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        a.back-to-main:hover {
+            background-color: #FF6C92;
+            transform: scale(1.1);
+            color: #FFFFFF;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Jug Problem Solver - Output</h1>
+    <pre id="outputConsole">{{ solution }}</pre>
+    <a href="/" class="back-to-main">Back to Main Menu</a>
+
+    <script>
+        window.onload = function() {
+            const outputConsole = document.getElementById('outputConsole');
+            
+            outputConsole.addEventListener('input', function() {
+                this.style.height = 'auto';
+                this.style.height = (this.scrollHeight + 10) + 'px';
+            });
+        }
+    </script>
+</body>
+</html>

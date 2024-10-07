@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jug Problem Solver</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(45deg, #6A2148 40%, #8C3D65);
+            background-size: cover;
+            color: #F5F5F5; 
+            text-align: center;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h1 {
+            font-size: 48px;
+            margin-bottom: 30px;
+            color: #FF9FB4;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        form {
+            max-width: 500px;
+            width: 100%;
+            padding: 20px;
+            background-color: #FFFFFF; 
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        label, input {
+            display: block;
+            margin-bottom: 10px;
+            transition: opacity 0.5s, transform 0.5s;
+            color: #6A2148; 
+        }
+        
+        input[type="number"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            border: 2px solid #000; 
+            border-radius: 4px;
+            font-size: 18px;
+            background-color: rgba(255, 255, 255, 0.9);
+            color: #333;
+            box-sizing: border-box;
+            transform: scale(1.05);
+        }
+
+        input[type="submit"] {
+            width: auto;
+            padding: 12px 24px;
+            font-size: 20px;
+            border: none;
+            border-radius: 4px;
+            background-color: #FF9FB4; 
+            color: #6A2148; 
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.5s;
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        input[type="submit"]:hover {
+            background-color: #FF6C92; 
+            transform: scale(1.1);
+        }
+
+        a {
+            margin-top: 20px;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-size: 20px;
+            border-radius: 4px;
+            background-color: #FF9FB4; 
+            color: #6A2148; 
+            transition: background-color 0.3s, transform 0.5s;
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        a:hover {
+            background-color: #FF6C92; 
+            transform: scale(1.1);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Jug Problem Solver</h1>
+    <form method="POST" action="/jug/input">
+        <label for="jug1">Capacity of Jug 1:</label>
+        <input type="number" id="jug1" name="jug1" required><br>
+        
+        <label for="jug2">Capacity of Jug 2:</label>
+        <input type="number" id="jug2" name="jug2" required><br>
+        
+        <label for="target">Target Amount:</label>
+        <input type="number" id="target" name="target" required><br>
+        
+        <input type="submit" value="Solve">
+    </form>
+    <a href="/" class="main-menu-link">Back to Main Menu</a>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelector('h1').style.animation = 'fadeIn 1s ease-in-out';
+        });
+    </script>
+</body>
+</html>

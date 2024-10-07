@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solution</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: linear-gradient(to bottom, #ffe156, #63843f);
+            color: #333;
+            text-align: center;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #63843f;
+        }
+
+        pre {
+            max-width: 95%;
+            min-height: 200px;
+            max-height: 400px; /* Set a max height to trigger scrolling */
+            overflow: auto; /* Add this line to enable scrolling */
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            color: #333;
+            box-shadow: inset 0 0 0 2px #000;
+            font-size: 20px;
+            line-height: 1.6;
+            white-space: pre-wrap;
+        }
+
+        a.back-to-menu {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #333;
+            background-color: #b4cc82;
+            border-radius: 8px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        a.back-to-menu:hover {
+            background-color: #99b966;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <h1>Solution</h1>
+    <pre>{{ solution }}</pre>
+    <a href="/" class="back-to-menu">Back to Main Menu</a>
+
+    <script>
+        window.onload = function() {
+            const preElement = document.querySelector('pre');
+            preElement.style.height = preElement.scrollHeight + 'px';
+        }
+    </script>
+</body>
+</html>

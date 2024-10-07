@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem Solver</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            background-image: url('/static/sav.jpg');
+            background-size: cover;
+            background-position: center;
+            /*background-color: navy;*/
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-left;
+            justify-content: center;
+            height: 100vh;
+           animation: fadeIn 1s ease-in-out;
+            margin-left: 10%;  /*Adjusted margin to position content between center and start */
+        }
+        
+        
+
+        h1, p, ul {
+            margin: 0;
+            padding: 0; /* Added padding to remove default padding */
+        }
+
+        h1 {
+            color: #01A185; /* Lux Green */
+            font-size: 48px;
+            margin-bottom: 10px; /* Slightly increased margin */
+            animation: slideInDown 1s ease-in-out;
+        }
+
+        p {
+            color: #FFFFFF; /* White */
+            font-size: 20px;
+            margin-bottom: 20px; /* Increased margin */
+            animation: slideInLeft 1s ease-in-out;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            animation: slideInRight 1s ease-in-out;
+            margin-top: 10px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #01A185; /* Lux Green */
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #006847; /* Darker shade of Lux Green */
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInDown {
+            from {
+                transform: translateY(-30px); /* Slightly adjusted translation */
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                transform: translateX(-20px); /* Slightly adjusted translation */
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                transform: translateX(20px); /* Slightly adjusted translation */
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Riddles Of Logic</h1>
+    <p>Choose a problem to solve:</p>
+    <ul>
+        <li><a href="/nqueens">N-Queens Problem</a></li>
+        <li><a href="/cryptarithmetic">Crypt-arithmetic Problem</a></li>
+        <li><a href="/jug">Water Jug Problem</a></li>
+    </ul>
+    <script>
+        const links = document.querySelectorAll('a');
+        
+        links.forEach(link => {
+            link.addEventListener('mouseover', () => {
+                link.style.transform = 'scale(1.1)';
+                link.style.transition = 'transform 0.3s ease-in-out';
+            });
+
+            link.addEventListener('mouseout', () => {
+                link.style.transform = 'scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>
